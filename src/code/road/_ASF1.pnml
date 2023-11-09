@@ -4,109 +4,109 @@
 #    This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
 #	 You should have received a copy of the GNU General Public License along with this program.  If not, see <https://github.com/pvillaverde/openttd-spanish-railsets/blob/main/LICENSE>.
 */
-spriteset (ASF1_guiSpriteset, "src/gfx/roads/ASF1/gui.gimp.png") { roadGuiTemplate() }
+spriteset (RABN_guiSpriteset, "src/gfx/roads/RABN/gui.gimp.png") { roadGuiTemplate() }
 
-spriteset (ASF1_underlaySpriteset, "src/gfx/roads/ASF1/underlay.gimp.png") { roadUnderlayTemplate() }
-spriteset (ASF1_underlaySnowSpriteset, "src/gfx/roads/ASF1/underlaySnow.gimp.png") { roadUnderlayTemplate() }
-spriteset (ASF1_underlayCitySpriteset, "src/gfx/roads/ASF1/underlayCity.gimp.png") { roadUnderlayTemplate() }
-spriteset (ASF1_underlayCitySnowSpriteset, "src/gfx/roads/ASF1/underlayCitySnow.gimp.png") { roadUnderlayTemplate() }
+spriteset (RABN_underlaySpriteset, "src/gfx/roads/RABN/underlay.gimp.png") { roadUnderlayTemplate() }
+spriteset (RABN_underlaySnowSpriteset, "src/gfx/roads/RABN/underlaySnow.gimp.png") { roadUnderlayTemplate() }
+spriteset (RABN_underlayCitySpriteset, "src/gfx/roads/RABN/underlayCity.gimp.png") { roadUnderlayTemplate() }
+spriteset (RABN_underlayCitySnowSpriteset, "src/gfx/roads/RABN/underlayCitySnow.gimp.png") { roadUnderlayTemplate() }
 
-spriteset (ASF1_bridgesSpriteset, "src/gfx/roads/ASF1/bridges.gimp.png") { roadBridgeOverlayTemplate() }
-spriteset (ASF1_bridgesSnowSpriteset, "src/gfx/roads/ASF1/bridgesSnow.gimp.png") { roadBridgeOverlayTemplate() }
-spriteset (ASF1_bridgesCitySnowSpriteset, "src/gfx/roads/ASF1/bridgesCitySnow.gimp.png") { roadBridgeOverlayTemplate() }
+spriteset (RABN_bridgesSpriteset, "src/gfx/roads/RABN/bridges.gimp.png") { roadBridgeOverlayTemplate() }
+spriteset (RABN_bridgesSnowSpriteset, "src/gfx/roads/RABN/bridgesSnow.gimp.png") { roadBridgeOverlayTemplate() }
+spriteset (RABN_bridgesCitySnowSpriteset, "src/gfx/roads/RABN/bridgesCitySnow.gimp.png") { roadBridgeOverlayTemplate() }
 
-spriteset (ASF1_stopsSpriteset, "src/gfx/roads/ASF1/stops.gimp.png") { roadStopsTemplate() }
-spriteset (ASF1_stopsSnowSpriteset, "src/gfx/roads/ASF1/stopsSnow.gimp.png") { roadStopsTemplate() }
-spriteset (ASF1_stopsCitySpriteset, "src/gfx/roads/ASF1/stopsCity.gimp.png") { roadStopsTemplate() }
-spriteset (ASF1_stopsCitySnowSpriteset, "src/gfx/roads/ASF1/stopsCitySnow.gimp.png") { roadStopsTemplate() }
+spriteset (RABN_stopsSpriteset, "src/gfx/roads/RABN/stops.gimp.png") { roadStopsTemplate() }
+spriteset (RABN_stopsSnowSpriteset, "src/gfx/roads/RABN/stopsSnow.gimp.png") { roadStopsTemplate() }
+spriteset (RABN_stopsCitySpriteset, "src/gfx/roads/RABN/stopsCity.gimp.png") { roadStopsTemplate() }
+spriteset (RABN_stopsCitySnowSpriteset, "src/gfx/roads/RABN/stopsCitySnow.gimp.png") { roadStopsTemplate() }
 
-spriteset (ASF1_depotsSpriteset, "src/gfx/roads/ASF1/depots.gimp.png") { roadDepotsTemplate() }
-spriteset (ASF1_depotsSnowSpriteset, "src/gfx/roads/ASF1/depotsSnow.gimp.png") { roadDepotsTemplate() }
+spriteset (RABN_depotsSpriteset, "src/gfx/roads/RABN/depots.gimp.png") { roadDepotsTemplate() }
+spriteset (RABN_depotsSnowSpriteset, "src/gfx/roads/RABN/depotsSnow.gimp.png") { roadDepotsTemplate() }
 
 
-switch (FEAT_ROADTYPES, SELF, ASF1_stopsTerrainCheckSwitch, terrain_type) {
-	TILETYPE_SNOW: ASF1_stopsSnowSpriteset;
-	ASF1_stopsSpriteset;
+switch (FEAT_ROADTYPES, SELF, RABN_stopsTerrainCheckSwitch, terrain_type) {
+	TILETYPE_SNOW: RABN_stopsSnowSpriteset;
+	RABN_stopsSpriteset;
 }
-switch (FEAT_ROADTYPES, SELF, ASF1_stopsCityTerrainCheckSwitch, terrain_type) {
-	TILETYPE_SNOW: ASF1_stopsCitySnowSpriteset;
-	ASF1_stopsCitySpriteset;
+switch (FEAT_ROADTYPES, SELF, RABN_stopsCityTerrainCheckSwitch, terrain_type) {
+	TILETYPE_SNOW: RABN_stopsCitySnowSpriteset;
+	RABN_stopsCitySpriteset;
 }
-switch (FEAT_ROADTYPES, SELF, ASF1_stopsTownZoneSwitch, town_zone) {
-	TOWNZONE_CENTRE: ASF1_stopsCityTerrainCheckSwitch;
-	TOWNZONE_INNER_SUBURB: ASF1_stopsCityTerrainCheckSwitch;
-	TOWNZONE_OUTER_SUBURB: ASF1_stopsCityTerrainCheckSwitch;
-	TOWNZONE_OUTSKIRT: ASF1_stopsCityTerrainCheckSwitch;
-	ASF1_stopsTerrainCheckSwitch;
+switch (FEAT_ROADTYPES, SELF, RABN_stopsTownZoneSwitch, town_zone) {
+	TOWNZONE_CENTRE: RABN_stopsCityTerrainCheckSwitch;
+	TOWNZONE_INNER_SUBURB: RABN_stopsCityTerrainCheckSwitch;
+	TOWNZONE_OUTER_SUBURB: RABN_stopsCityTerrainCheckSwitch;
+	TOWNZONE_OUTSKIRT: RABN_stopsCityTerrainCheckSwitch;
+	RABN_stopsTerrainCheckSwitch;
 }
-switch (FEAT_ROADTYPES, SELF, ASF1_bridgesTerrainCheckSwitch, terrain_type) {
-	TILETYPE_SNOW: ASF1_bridgesSnowSpriteset;
-	ASF1_bridgesSpriteset;
+switch (FEAT_ROADTYPES, SELF, RABN_bridgesTerrainCheckSwitch, terrain_type) {
+	TILETYPE_SNOW: RABN_bridgesSnowSpriteset;
+	RABN_bridgesSpriteset;
 }
-switch (FEAT_ROADTYPES, SELF, ASF1_depotsTerrainCheckSwitch, terrain_type) {
-	TILETYPE_SNOW: ASF1_depotsSnowSpriteset;
-	ASF1_depotsSpriteset;
-}
-
-switch (FEAT_ROADTYPES, SELF, ASF1_underlayCityTerrainCheckSwitch, terrain_type) {
-	TILETYPE_SNOW: ASF1_underlayCitySnowSpriteset;
-	ASF1_underlayCitySpriteset;
-}
-switch (FEAT_ROADTYPES, SELF, ASF1_underlayTerrainCheckSwitch, terrain_type) {
-	TILETYPE_SNOW: ASF1_underlaySnowSpriteset;
-	ASF1_underlaySpriteset;
+switch (FEAT_ROADTYPES, SELF, RABN_depotsTerrainCheckSwitch, terrain_type) {
+	TILETYPE_SNOW: RABN_depotsSnowSpriteset;
+	RABN_depotsSpriteset;
 }
 
-switch (FEAT_ROADTYPES, SELF, ASF1_underlayTownZoneSwitch, town_zone) {
-	TOWNZONE_CENTRE: ASF1_underlayCityTerrainCheckSwitch;
-	TOWNZONE_INNER_SUBURB: ASF1_underlayCityTerrainCheckSwitch;
-	TOWNZONE_OUTER_SUBURB: ASF1_underlayCityTerrainCheckSwitch;
-	TOWNZONE_OUTSKIRT: ASF1_underlayCityTerrainCheckSwitch;
-	ASF1_underlayTerrainCheckSwitch;
+switch (FEAT_ROADTYPES, SELF, RABN_underlayCityTerrainCheckSwitch, terrain_type) {
+	TILETYPE_SNOW: RABN_underlayCitySnowSpriteset;
+	RABN_underlayCitySpriteset;
+}
+switch (FEAT_ROADTYPES, SELF, RABN_underlayTerrainCheckSwitch, terrain_type) {
+	TILETYPE_SNOW: RABN_underlaySnowSpriteset;
+	RABN_underlaySpriteset;
+}
+
+switch (FEAT_ROADTYPES, SELF, RABN_underlayTownZoneSwitch, town_zone) {
+	TOWNZONE_CENTRE: RABN_underlayCityTerrainCheckSwitch;
+	TOWNZONE_INNER_SUBURB: RABN_underlayCityTerrainCheckSwitch;
+	TOWNZONE_OUTER_SUBURB: RABN_underlayCityTerrainCheckSwitch;
+	TOWNZONE_OUTSKIRT: RABN_underlayCityTerrainCheckSwitch;
+	RABN_underlayTerrainCheckSwitch;
 }
 
 if (param_speed_units == SPEED_UNITY_MPH) {
-	item(FEAT_ROADTYPES, item_road_ASF1) {
+	item(FEAT_ROADTYPES, item_road_RABN) {
 		property {	
-			speed_limit:                 param_speedlimit_ASF1 mph;
+			speed_limit:                 param_speedlimit_RABN mph;
 		}
 	}
 }
 if (param_speed_units == SPEED_UNITY_KMH) {
-	item(FEAT_ROADTYPES, item_road_ASF1) {
+	item(FEAT_ROADTYPES, item_road_RABN) {
 		property {	
-			speed_limit:                 param_speedlimit_ASF1 km/h;
+			speed_limit:                 param_speedlimit_RABN km/h;
 		}
 	}
 }
 if (param_speed_units == SPEED_UNITY_MPS) {
-	item(FEAT_ROADTYPES, item_road_ASF1) {
+	item(FEAT_ROADTYPES, item_road_RABN) {
 		property {	
-			speed_limit:                 param_speedlimit_ASF1 m/s;
+			speed_limit:                 param_speedlimit_RABN m/s;
 		}
 	}
 }
-item(FEAT_ROADTYPES, item_road_ASF1) {
+item(FEAT_ROADTYPES, item_road_RABN) {
 	property {
-		label:                       "ASF1";
+		label:                       "RABN";
 		introduction_date:           (param_intro_year == 0) ? date(1940,01,01) : 0;
-		name:                        string(STR_ROAD_ASF1_NAME);
-		toolbar_caption:             string(STR_ROAD_ASF1_TOOLBAR);
-		menu_text:                   string(STR_ROAD_ASF1_MENU);
+		name:                        string(STR_ROAD_RABN_NAME);
+		toolbar_caption:             string(STR_ROAD_RABN_TOOLBAR);
+		menu_text:                   string(STR_ROAD_RABN_MENU);
 		build_window_caption:        string(STR_GENERIC_BUILD_VEHICLE);
 		autoreplace_text:            string(STR_GENERIC_AUTOREPLACE);
 		new_engine_text:             string(STR_GENERIC_NEW_ENGINE);
-		powered_roadtype_list:       ["ROAD", "SETT", "STON", "R4X4", "DIRT", "GRAV", "ASF0", "EIND", "ASF1", "ASF2", "HWAY"];
+		powered_roadtype_list:       ["ROAD", "SETT", "STON", "R4X4", "DIRT", "GRAV", "ASF0", "EIND", "RABN", "ASF2", "HWAY"];
 		roadtype_flags:              bitmask(ROADTYPE_FLAG_TOWN_BUILD);
 		construction_cost:           6;
 		maintenance_cost:            12;
 		sort_order:                  06;	
 	}
 	graphics {
-		gui:						 ASF1_guiSpriteset;
-		underlay:                    ASF1_underlayTownZoneSwitch;
-		roadstops:                   ASF1_stopsTownZoneSwitch;
-		bridge_surfaces:             ASF1_bridgesTerrainCheckSwitch;
-		depots:	                     ASF1_depotsTerrainCheckSwitch;
+		gui:						 RABN_guiSpriteset;
+		underlay:                    RABN_underlayTownZoneSwitch;
+		roadstops:                   RABN_stopsTownZoneSwitch;
+		bridge_surfaces:             RABN_bridgesTerrainCheckSwitch;
+		depots:	                     RABN_depotsTerrainCheckSwitch;
 	}
 }
